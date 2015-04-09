@@ -4,7 +4,7 @@
 
   angular.module('app.users')
 
-  .factory('UsersFactory', function ($http, $rootScope, $cookieStore, $location, JOBBER, AWS, PATHS) {
+  .factory('UsersFactory', function ($http, $rootScope, $cookieStore, $location, HEROKU, PATHS) {
 
     var self = this;
 
@@ -58,7 +58,7 @@
 
       signup: function (userObj) {
         var self = this;
-        $http.post(JOBBER.URL + 'users', {user: userObj})
+        $http.post(HEROKU.URL + 'users', {user: userObj})
           .success(function (res) {
             self.setCookie(res);
             $location.path(PATHS.HOME);
@@ -71,7 +71,7 @@
 
       signin: function (userObj) {
         var self = this;
-        $http.post(JOBBER.URL + 'users/sign_in', {user: userObj})
+        $http.post(HEROKU.URL + 'users/sign_in', {user: userObj})
           .success(function (res) {
             // console.log('signin success res: ', res);
 
@@ -98,7 +98,7 @@
 
 
       update: function (userObj) {
-        $http.post(JOBBER.URL + 'user_profile', {user: userObj}, this.config())
+        $http.post(HEROKU.URL + 'user_profile', {user: userObj}, this.config())
           .success(function (res) {
             console.log('update success res: ', res);
             broadcast('update');
@@ -110,7 +110,7 @@
       },
 
       // deleteResume: function (id) {
-      //   $http.delete(JOBBER.URL + 'user_resume/' + id, this.config());
+      //   $http.delete(HEROKU.URL + 'user_resume/' + id, this.config());
       // }
 
     };

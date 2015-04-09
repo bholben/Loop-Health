@@ -9,25 +9,25 @@
     'app.jobs'
   ])
 
-  .constant('JOBBER', {
+  .constant('HEROKU', {
     // URL: 'http://brian.t.proxylocal.com/'
     URL: 'https://pre-post-interview.herokuapp.com/'
   })
 
-  .constant('AWS', {
-    URL: '',
-    headers: {
-      '': ''
-    }
-  })
+  // .constant('AWS', {
+  //   URL: '',
+  //   headers: {
+  //     '': ''
+  //   }
+  // })
 
-  .constant('LINKEDIN', {
-    URL: 'https://api.linkedin.com/v1/',
-    headers: {
-      'Content-Type': 'application/json',
-      'x-li-format': 'json'
-    }
-  })
+  // .constant('LINKEDIN', {
+  //   URL: 'https://api.linkedin.com/v1/',
+  //   headers: {
+  //     'Content-Type': 'application/json',
+  //     'x-li-format': 'json'
+  //   }
+  // })
 
   .constant('PATHS', {
     HOME: '/settings'
