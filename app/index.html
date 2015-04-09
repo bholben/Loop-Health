@@ -1,0 +1,66 @@
+<!doctype html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>hackathon</title>
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
+    <link rel="stylesheet" href="../bower_components/materialize/bin/materialize.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <link rel="stylesheet" href="../flaticon/flaticon.css">
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body>
+    <div class = "navbar-fixed">
+      <nav class="header">
+        <div class="nav-wrapper">
+          <div class="container">
+            <a href="#/dashboard" class="brand-logo">Jobber</a>
+            <ul class="right right-override">
+              <!-- <li><a href="#/companies"><i class="mdi-social-location-city left"></i>Companies</a></li> -->
+              <li><a href="#/dashboard"><i class="nav-icon mdi-notification-event-note left"></i><span class="nav-label">Upcoming Events</span></a></li>
+              <li><a href="#/jobs"><i class="nav-icon flaticon-business148 left"></i><span class="nav-label">Jobs</span></a></li>
+              <li><a href="#/settings"><i class="nav-icon flaticon-settings49 left"></i><span class="nav-label">Settings</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <section class="body row" ng-view></section>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/underscore/underscore.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-route/angular-route.js"></script>
+    <script src="../bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="../bower_components/materialize/bin/materialize.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/routes.js"></script>
+
+    <script src="scripts/events/events.js"></script>
+    <script src="scripts/events/events.factory.js"></script>
+
+    <script src="scripts/users/users.js"></script>
+    <script src="scripts/users/users.factory.js"></script>
+
+    <script src="scripts/jobs/jobs.js"></script>
+    <script src="scripts/jobs/jobs.factory.js"></script>
+    <script src="scripts/jobs/companies.factory.js"></script>
+    <!-- endbuild -->
+</body>
+</html>
