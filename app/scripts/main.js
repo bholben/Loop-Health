@@ -6,32 +6,19 @@
     'ngRoute',
     'app.users',
     'app.events',
-    'app.jobs'
-  ])
+    'app.jobs',
 
-  .constant('HEROKU', {
-    // URL: 'http://brian.t.proxylocal.com/'
-    URL: 'https://pre-post-interview.herokuapp.com/'
-  })
 
-  // .constant('AWS', {
-  //   URL: '',
-  //   headers: {
-  //     '': ''
-  //   }
-  // })
+    // // Router
+    // 'app.router',
+    // 'app.route_watchers',
 
-  // .constant('LINKEDIN', {
-  //   URL: 'https://api.linkedin.com/v1/',
-  //   headers: {
-  //     'Content-Type': 'application/json',
-  //     'x-li-format': 'json'
-  //   }
-  // })
+    // // User authentication
+    // 'app.users',
+    // 'app.user_signup',
 
-  .constant('PATHS', {
-    HOME: '/settings'
-  });
+
+  ]);
 
 }());
 

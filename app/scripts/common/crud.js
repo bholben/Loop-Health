@@ -3,44 +3,44 @@
   'use strict';
 
   angular.module('app.crud', [
-    'app.rails',
+    'app.server',
     'app.cookies'
   ])
 
-  .factory('Crud', function ($http, RAILS, UserCookieFactory) {
+  .factory('Crud', function ($http, HEROKU, UserCookieFactory) {
 
     var url = function (path, id) {
-      return RAILS.URL + path + '/' + (id || '');
+      return HEROKU.URL + path + '/' + (id || '');
     };
 
     return {
 
       create: function (path, obj) {
         UserCookieFactory.tokenizeHeader();
-        return $http.post(url(path), obj, RAILS.CONFIG);
+        return $http.post(url(path), obj, HEROKU.CONFIG);
       },
 
       retrieveAll: function (path) {
         UserCookieFactory.tokenizeHeader();
         return $http.get(url(path), {
-          headers: RAILS.CONFIG.headers,
+          headers: HEROKU.CONFIG.headers,
           cache: true
         });
       },
 
       retrieve: function (path, id) {
         UserCookieFactory.tokenizeHeader();
-        return $http.get(url(path, id), RAILS.CONFIG);
+        return $http.get(url(path, id), HEROKU.CONFIG);
       },
 
       update: function (path, obj) {
         UserCookieFactory.tokenizeHeader();
-        return $http.put(url(path, obj.id), obj, RAILS.CONFIG);
+        return $http.put(url(path, obj.id), obj, HEROKU.CONFIG);
       },
 
       delete: function (path, id) {
         UserCookieFactory.tokenizeHeader();
-        return $http.delete(url(path, id), RAILS.CONFIG);
+        return $http.delete(url(path, id), HEROKU.CONFIG);
       },
 
     };

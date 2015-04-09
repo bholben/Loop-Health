@@ -4,10 +4,10 @@
 
   angular.module('app.cookies', [
     'ngCookies',
-    'app.rails'
+    'app.server'
   ])
 
-  .factory('UserCookieFactory', function ($cookieStore, RAILS) {
+  .factory('UserCookieFactory', function ($cookieStore, HEROKU) {
 
     return {
 
@@ -25,7 +25,7 @@
 
       tokenizeHeader: function () {
         var c = this.get();
-        if (c) return RAILS.CONFIG.headers.authentication_token = c.authentication_token;
+        if (c) return HEROKU.CONFIG.headers.authentication_token = c.authentication_token;
       }
 
     };
