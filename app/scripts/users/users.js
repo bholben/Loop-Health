@@ -4,14 +4,19 @@
 
   angular.module('app.users', [
     'ngCookies',
+    'app.cookies',
+    'app.user_auth',
     'app.server',
     'app.paths',
   ])
 
-  .controller('Users', function ($scope, $rootScope, $location, UsersFactory, PATHS) {
+  .controller('Users', function ($scope, $rootScope, $location, UsersFactory, UserAuthFactory, UserCookieFactory, PATHS) {
 
     // Redirect if signed in (and leave this controller).
-    if (UsersFactory.getCookie()) return $location.path(PATHS.HOME);
+    if (UserCookieFactory.get()) return $location.path(PATHS.HOME);
+
+    // // Redirect if signed in (and leave this controller).
+    // if (UsersFactory.getCookie()) return $location.path(PATHS.HOME);
 
     $scope.signup = function (user) {
       if (user.password === user.password_confirmation) {

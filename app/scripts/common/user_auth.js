@@ -2,13 +2,13 @@
 ;(function () {
   'use strict';
 
-  angular.module('app.users', [
+  angular.module('app.user_auth', [
     'app.cookies',
     'app.server',
     'app.paths',
   ])
 
-  .factory('UsersFactory', function ($http, $rootScope, $location, UserCookieFactory, HEROKU, PATHS) {
+  .factory('UserAuthFactory', function ($http, $rootScope, $location, UserCookieFactory, HEROKU, PATHS) {
 
     var broadcast = function(action, obj) {
       $rootScope.$broadcast(action, obj);
@@ -45,7 +45,7 @@
       signout: function () {
         UserCookieFactory.remove();
         broadcast('signout');
-        $location.path('/signup');
+        $location.path('/signin');
       },
 
     };
