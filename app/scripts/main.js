@@ -2,11 +2,13 @@
 ;(function () {
   'use strict';
 
+  $('.button-collapse').sideNav();
+  $('.dropdown-button').dropdown({hover: false});
+
   angular.module('app', [
     'ngRoute',
     'app.users',
-    'app.events',
-    'app.jobs',
+    // 'app.component1',
 
 
     // // Router

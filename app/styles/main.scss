@@ -1,6 +1,29 @@
 
 @import "materialize/materialize";
 
+
+.nav-wrapper {
+  // .nav-container {
+  //   position: relative;
+    #user-menu {
+      position: fixed;
+      top: 72px;
+      // right: 20px;
+    }
+  // }
+  .top-menu li:last-child {
+    a {
+      padding-right: 0;
+      i.left {
+        margin-right: 5px;
+      }
+      i.right {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
 .collection {
   // This makes the card margins look better on top and bottom.
   margin: 0;

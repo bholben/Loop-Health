@@ -18,14 +18,14 @@
         templateUrl: 'scripts/users/user.settings.html',
         controller: 'UserProfile'
       })
-      .when('/events', {
-        templateUrl: 'scripts/events/events.html',
-        controller: 'Events'
-      })
-      .when('/jobs', {
-        templateUrl: 'scripts/jobs/jobs.html',
-        controller: 'Jobs'
-      })
+      // .when('/events', {
+      //   templateUrl: 'scripts/events/events.html',
+      //   controller: 'Events'
+      // })
+      // .when('/jobs', {
+      //   templateUrl: 'scripts/jobs/jobs.html',
+      //   controller: 'Jobs'
+      // })
       .otherwise('/settings');
   });
 

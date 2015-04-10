@@ -20,14 +20,10 @@
         templateUrl: 'scripts/users/user.settings.html',
         controller: 'UserProfile'
       })
-      .when('/events', {
-        templateUrl: 'scripts/events/events.html',
-        controller: 'Events'
-      })
-      .when('/jobs', {
-        templateUrl: 'scripts/jobs/jobs.html',
-        controller: 'Jobs'
-      })
+      // .when('/component1', {
+      //   templateUrl: 'scripts/component1/component1.html',
+      //   controller: 'Events'
+      // })
       .otherwise('/settings');
   });
 
