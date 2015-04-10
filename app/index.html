@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="app">
+<html ng-app="app" ng-controller="App">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
@@ -66,6 +66,7 @@
 
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
+    <script src="scripts/common/controller.js"></script>
     <script src="scripts/common/cookies.js"></script>
     <script src="scripts/common/crud.js"></script>
     <script src="scripts/common/lodash.js"></script>
@@ -75,8 +76,9 @@
     <script src="scripts/common/server.js"></script>
     <script src="scripts/common/user_auth.js"></script>
 
-    <script src="scripts/users/users.js"></script>
-    <script src="scripts/users/users.factory.js"></script>
+    <script src="scripts/user-signup/user-signup.js"></script>
+    <script src="scripts/user-signin/user-signin.js"></script>
+    <script src="scripts/user-profile/user-profile.js"></script>
     <script src="scripts/component1/component1.js"></script>
     <!-- endbuild -->
 

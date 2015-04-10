@@ -11,6 +11,8 @@
     'app.router',
     'app.route_watchers',
 
+    'app.controller',
+
     // User authentication
     'app.users',
     // 'app.user_signup',

@@ -3,28 +3,29 @@
   'use strict';
 
   angular.module('app.router', [
-    'ngRoute'
+    'ngRoute',
+    'app.paths',
   ])
 
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, PATHS) {
     $routeProvider
       .when('/signup', {
-        templateUrl: 'scripts/users/user.signup.html',
-        controller: 'Users'
+        templateUrl: 'scripts/user-signup/user-signup.html',
+        controller: 'UserSignup'
       })
       .when('/signin', {
-        templateUrl: 'scripts/users/user.signin.html',
-        controller: 'Users'
+        templateUrl: 'scripts/user-signin/user-signin.html',
+        controller: 'UserSignin'
       })
-      .when('/settings', {
-        templateUrl: 'scripts/users/user.settings.html',
+      .when('/profile', {
+        templateUrl: 'scripts/user-profile/user-profile.html',
         controller: 'UserProfile'
       })
       .when('/component1', {
         templateUrl: 'scripts/component1/component1.html',
         controller: 'Component1'
       })
-      .otherwise('/settings');
+      .otherwise(PATHS.HOME);
   });
 
 }());

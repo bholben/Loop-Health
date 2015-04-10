@@ -7,7 +7,7 @@
   .constant('HEROKU', {
 
     // URL: 'http://brian.t.proxylocal.com/'
-    URL: 'https://pre-post-interview.herokuapp.com/',
+    URL: 'https://inno-be.herokuapp.com/',
 
     CONFIG: {
       headers: {
