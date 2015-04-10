@@ -3,14 +3,12 @@
 
 
 .nav-wrapper {
-  // .nav-container {
-  //   position: relative;
-    #user-menu {
-      // position: fixed;
-      top: 72px;
-      // right: 20px;
-    }
-  // }
+  .va-logo {
+    height: 40px
+  }
+  #user-menu {
+    top: 72px;
+  }
   .top-menu li:last-child {
     a {
       padding-right: 0;
@@ -22,6 +20,10 @@
       }
     }
   }
+}
+
+section.body {
+  margin-top: 10px;
 }
 
 .collection {

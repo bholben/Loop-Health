@@ -2,12 +2,11 @@
 ;(function () {
   'use strict';
 
-  angular.module('app.events', [])
+  angular.module('app.component1', [])
 
-  .controller('Events', function ($scope, $location, UsersFactory) {
+  .controller('Component1', function () {
 
-    // Redirect if not signed in
-    if (!UsersFactory.getCookie()) return $location.path('/signin');
+
 
   });
 

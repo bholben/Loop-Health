@@ -17,10 +17,10 @@
       var signedIn = UserCookieFactory.tokenizeHeader(),
           publicRoute = _.includes(PATHS.PUBLIC, $location.path());
 
-      if (!signedIn) {
-        $rootScope.$broadcast('not signed in');
-        if (!publicRoute) $location.path('/signup');
-      }
+      // if (!signedIn) {
+      //   $rootScope.$broadcast('not signed in');
+      //   if (!publicRoute) $location.path('/signup');
+      // }
 
     });
 

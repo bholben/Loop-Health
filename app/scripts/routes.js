@@ -1,33 +1,30 @@
 
-;(function () {
-  'use strict';
+// ;(function () {
+//   'use strict';
 
-  angular.module('app')
+//   angular.module('app')
 
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/signup', {
-        templateUrl: 'scripts/users/user.signup.html',
-        controller: 'Users'
-      })
-      .when('/signin', {
-        templateUrl: 'scripts/users/user.signin.html',
-        controller: 'Users'
-      })
-      .when('/settings', {
-        templateUrl: 'scripts/users/user.settings.html',
-        controller: 'UserProfile'
-      })
-      // .when('/events', {
-      //   templateUrl: 'scripts/events/events.html',
-      //   controller: 'Events'
-      // })
-      // .when('/jobs', {
-      //   templateUrl: 'scripts/jobs/jobs.html',
-      //   controller: 'Jobs'
-      // })
-      .otherwise('/settings');
-  });
+//   .config(function ($routeProvider) {
+//     $routeProvider
+//       .when('/signup', {
+//         templateUrl: 'scripts/users/user.signup.html',
+//         controller: 'Users'
+//       })
+//       .when('/signin', {
+//         templateUrl: 'scripts/users/user.signin.html',
+//         controller: 'Users'
+//       })
+//       .when('/settings', {
+//         templateUrl: 'scripts/users/user.settings.html',
+//         controller: 'UserProfile'
+//       })
+//       .when('/component1', {
+//         templateUrl: 'scripts/component1/component1.html',
+//         controller: 'Component1'
+//       })
+//       .otherwise('/settings');
+//   });
 
-}());
+// }());
 
+// //
