@@ -3,47 +3,136 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <title>hackathon</title>
+    <title>HealthCheck</title>
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="../bower_components/materialize/bin/materialize.css" />
     <!-- endbower -->
     <!-- endbuild -->
-
-    <link rel="stylesheet" href="../flaticon/flaticon.css">
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body>
-    <div class = "navbar-fixed">
+  <!-- <body class="indigo lighten-5 grey-text"> -->
+  <body class="indigo lighten-5">
+    <div class="navbar-fixed">
+      <!-- <nav class="header indigo darken-3"> -->
       <nav class="header">
         <div class="nav-wrapper">
           <div class="container">
-            <a href="#/dashboard" class="brand-logo">Jobber</a>
+            <a href="#/dashboard" class="brand-logo grey-text text-lighten-3">Health<span class="grey-text text-lighten-1">Check</span></a>
             <ul class="right right-override">
               <!-- <li><a href="#/companies"><i class="mdi-social-location-city left"></i>Companies</a></li> -->
-              <li><a href="#/dashboard"><i class="nav-icon mdi-notification-event-note left"></i><span class="nav-label">Upcoming Events</span></a></li>
-              <li><a href="#/jobs"><i class="nav-icon flaticon-business148 left"></i><span class="nav-label">Jobs</span></a></li>
-              <li><a href="#/settings"><i class="nav-icon flaticon-settings49 left"></i><span class="nav-label">Settings</span></a></li>
+              <li><a href="#/dashboard"><span class="nav-label">Menu1</span></a></li>
+              <li><a href="#/jobs"><span class="nav-label">Menu2</span></a></li>
+              <li><a href="#/settings"><span class="nav-label">Menu3</span></a></li>
             </ul>
           </div>
         </div>
       </nav>
     </div>
 
+    <div class="row">
+      <div class="col s12 m8 offset-m2 l6 offset-l3">
+        <div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s2">
+              <img src="images/bob.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+            </div>
+            <div class="col s10">
+              <span class="black-text">
+                This is a square image. Add the "circle" class to it to make it appear circular.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+
+      <div class="col s12 m5 offset-m1">
+        <div class="card">
+          <div class="card-image">
+            <img src="images/caribbean.jpg">
+            <span class="card-title">Card Title</span>
+          </div>
+          <div class="card-content">
+            <p>I am a very simple card. I am good at containing small bits of information.
+            I am convenient because I require little markup to use effectively.</p>
+          </div>
+          <div class="card-action">
+            <a href="#">This is a link</a>
+            <a href='#'>This is a link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m5">
+        <div class="card">
+          <div class="collection with-header">
+            <div class="collection-header"><h4>First Names</h4></div>
+            <a href="#!" class="collection-item">Alvin</a>
+            <a href="#!" class="collection-item active">Alvin</a>
+            <a href="#!" class="collection-item">Alvin</a>
+            <a href="#!" class="collection-item">Alvin</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <ul class="collection">
+            <a href="#!" class="collection-item avatar">
+              <img src="images/bob.jpg" alt="" class="circle">
+              <span class="title">Title</span>
+              <p>First Line <br>
+                 Second Line
+              </p>
+              <span class="secondary-content">&times;</span>
+            </a>
+            <a href="#!" class="collection-item avatar">
+              <i class="mdi-file-folder circle"></i>
+              <span class="title">Title</span>
+              <p>First Line <br>
+                 Second Line
+              </p>
+              <span class="secondary-content">&times;</span>
+            </a>
+            <a href="#!" class="collection-item avatar">
+              <i class="mdi-action-assessment circle green"></i>
+              <span class="title">Title</span>
+              <p>First Line <br>
+                 Second Line
+              </p>
+              <span class="secondary-content">&times;</span>
+            </a>
+            <a href="#!" class="collection-item avatar">
+              <i class="mdi-av-play-arrow circle red"></i>
+              <span class="title">Title</span>
+              <p>First Line <br>
+                 Second Line
+              </p>
+              <span class="secondary-content">&times;</span>
+            </a>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+
     <section class="body row" ng-view></section>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/materialize/dist/js/materialize.js"></script>
     <script src="../bower_components/lodash/lodash.js"></script>
     <script src="../bower_components/angular/angular.js"></script>
     <script src="../bower_components/angular-route/angular-route.js"></script>
     <script src="../bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="../bower_components/materialize/bin/materialize.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
