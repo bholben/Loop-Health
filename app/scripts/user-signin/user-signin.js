@@ -2,7 +2,7 @@
 ;(function () {
   'use strict';
 
-  angular.module('app.users', [
+  angular.module('app.user_signin', [
     'app.cookies',
     'app.user_auth',
     'app.paths',
@@ -13,7 +13,7 @@
     // Redirect if signed in (and leave this controller).
     if (UserCookieFactory.get()) return $location.path(PATHS.HOME);
 
-    $scope.signIn = function (user) {
+    $scope.signin = function (user) {
       UserAuthFactory.signin(user);
     };
 

@@ -17,6 +17,8 @@
     return {
 
       signup: function (userObj) {
+        // $.post(HEROKU.URL, {user: userObj});
+        console.log('POST: ', {user: userObj});
         $http.post(HEROKU.URL + 'users/', {user: userObj})
           .success(function (res) {
             console.log('Sign up response: ', res);
@@ -25,6 +27,7 @@
             broadcast('signup');
           })
           .error(function (res) {
+            console.log('Sign up error response: ', res);
             broadcast('signup error', res.messages || []);
           });
       },
@@ -38,6 +41,7 @@
             broadcast('signin');
           })
           .error(function (res) {
+            console.log('Sign in error response: ', res);
             broadcast('signin error', res.messages || []);
           });
       },

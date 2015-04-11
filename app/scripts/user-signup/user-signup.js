@@ -2,7 +2,7 @@
 ;(function () {
   'use strict';
 
-  angular.module('app.users', [
+  angular.module('app.user_signup', [
     'app.cookies',
     'app.user_auth',
     'app.paths',
@@ -14,6 +14,9 @@
     if (UserCookieFactory.get()) return $location.path(PATHS.HOME);
 
     $scope.signup = function (user) {
+
+      console.log(user);
+
       if (user.password === user.password_confirmation) {
         UserAuthFactory.signup(user);
       } else {

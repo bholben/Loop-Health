@@ -11,15 +11,17 @@
     'app.router',
     'app.route_watchers',
 
-    'app.controller',
+    // Nav & global control
+    'app.global_controller',
 
     // User authentication
-    'app.users',
-    // 'app.user_signup',
-    // 'app.user_signin',
+    'app.user_signup',
+    'app.user_signin',
+    'app.user_profile',
 
     // Components
-    'app.component1',
+    'app.timeline',
+    'app.questions',
 
   ]);
 

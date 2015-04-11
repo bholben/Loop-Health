@@ -2,7 +2,7 @@
 ;(function () {
   'use strict';
 
-  angular.module('app.users', [
+  angular.module('app.user_profile', [
 
 
   ])

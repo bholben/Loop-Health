@@ -21,9 +21,13 @@
         templateUrl: 'scripts/user-profile/user-profile.html',
         controller: 'UserProfile'
       })
-      .when('/component1', {
-        templateUrl: 'scripts/component1/component1.html',
-        controller: 'Component1'
+      .when('/timeline', {
+        templateUrl: 'scripts/timeline/timeline.html',
+        controller: 'Timeline'
+      })
+      .when('/questions', {
+        templateUrl: 'scripts/questions/questions.html',
+        controller: 'Questions'
       })
       .otherwise(PATHS.HOME);
   });
