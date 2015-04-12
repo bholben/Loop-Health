@@ -7,6 +7,8 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="../bower_components/materialize/bin/materialize.css" />
+    <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -29,8 +31,23 @@
               <a href="#" data-activates="side-menu" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
 
               <ul class="right hide-on-med-and-down top-menu">
-                <li ng-show="signedIn" ng-click="toggleUserMenu()"><a href="#/profile" class="dropdown-button"><img class="avatar left circle" ng-src="{{ gravatarURL }}"></i>Bob Holben<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
+                <li ng-show="signedIn" ng-click="toggleUserMenu()"><a href="#/profile" class="dropdown-button">
+                <img ng-src="images/Stephanie.jpg" class="avatar left circle">
+                Stephanie Mullane<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
               </ul>
+
+              <div class="progressbar">
+                <div class="user-icons">
+                  <span class="fa fa-user"></span><span class="fa fa-user-md"></span>
+                </div>
+                <div class="progress-bars">
+                  <div class="bar bar1"></div>
+                  <div class="bar bar2"></div>
+                  <div class="bar bar3"></div>
+                  <div class="bar bar4"></div>
+                  <div class="bar bar5"></div>
+                </div>
+              </div>
 
               <div class="user">
                 <ul class="user-menu blue-grey-text" ng-show="showUserMenu">
@@ -55,11 +72,11 @@
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
-    <script src="../bower_components/materialize/dist/js/materialize.js"></script>
     <script src="../bower_components/lodash/lodash.js"></script>
     <script src="../bower_components/angular/angular.js"></script>
     <script src="../bower_components/angular-route/angular-route.js"></script>
     <script src="../bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="../bower_components/materialize/bin/materialize.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

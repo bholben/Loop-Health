@@ -1,5 +1,5 @@
 {
-  "name": "bholben-jobber",
+  "name": "bholben-loop-health",
   "root": "dist",
   "clean_urls": true,
   "error_page": "error.html"

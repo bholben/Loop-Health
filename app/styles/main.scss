@@ -57,11 +57,42 @@
     a {
       padding-right: 0;
       img.avatar {
-        margin: 15px 10px;
+        width: 40px;
+        margin: 12px 10px;
       }
       i.right {
         margin-left: 0;
       }
+    }
+  }
+  .progressbar {
+    .user-icons {
+      margin-top: -5px;
+      text-align: center;
+      font-size: 30px;
+      span.fa-user {
+        margin-left: 140px;
+      }
+      span.fa-user-md {
+        margin-left: 80px;
+      }
+    }
+    .progress-bars {
+      margin: 0 0 10px 362px;
+      overflow: hidden;
+      .bar {
+        float: left;
+        width: 22px;
+        height: 8px;
+        margin-right: 5px;
+        border-radius: 2px;
+        background-color: white;
+      }
+      .bar1 { background-color: red; }
+      .bar2 { background-color: orange; }
+      .bar3 { background-color: yellow; }
+      .bar4 { background-color: green; }
+      .bar5 { background-color: green; }
     }
   }
   div.user {
