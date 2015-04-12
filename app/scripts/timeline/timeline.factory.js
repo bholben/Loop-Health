@@ -99,6 +99,7 @@
       Cardiology: 'deptCardio',
       Nephrology: 'deptPT',
       'General Surgery': 'deptOncology',
+      Nursing: 'deptNurse',
     };
 
     var tempImageMap = {
@@ -113,7 +114,6 @@
 
     visits.forEach(function (visit) {
       visit.colorDept = colorMap[visit.department];
-      visit.imageName = 'Bob';
       visit.imageName = tempImageMap[visit.name];
     });
 

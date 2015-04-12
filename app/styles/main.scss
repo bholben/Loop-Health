@@ -1,6 +1,102 @@
 
 @import "materialize/materialize";
 
+// @charset "UTF-8";
+
+// @font-face {
+//   font-family: "loop-font-1";
+//   src:url("font/loop-font-1.eot");
+//   src:url("font/loop-font-1.eot?#iefix") format("embedded-opentype"),
+//     url("font/loop-font-1.woff") format("woff"),
+//     url("font/loop-font-1.ttf") format("truetype"),
+//     url("font/loop-font-1.svg#loop-font-1") format("svg");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// [data-icon]:before {
+//   font-family: "loop-font-1" !important;
+//   content: attr(data-icon);
+//   font-style: normal !important;
+//   font-weight: normal !important;
+//   font-variant: normal !important;
+//   text-transform: none !important;
+//   speak: none;
+//   line-height: 1;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
+
+// [class^="icon-"]:before,
+// [class*=" icon-"]:before {
+//   font-family: "loop-font-1" !important;
+//   font-style: normal !important;
+//   font-weight: normal !important;
+//   font-variant: normal !important;
+//   text-transform: none !important;
+//   speak: none;
+//   line-height: 1;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
+
+// .icon-loop-logo:before {
+//   content: "c";
+// }
+
+
+
+
+@charset "UTF-8";
+
+@font-face {
+  font-family: "untitled-font-1";
+  src:url("../font/loop/untitled-font-1.eot");
+  src:url("../font/loop/untitled-font-1.eot?#iefix") format("embedded-opentype"),
+    url("../font/loop/untitled-font-1.woff") format("woff"),
+    url("../font/loop/untitled-font-1.ttf") format("truetype"),
+    url("../font/loop/untitled-font-1.svg#untitled-font-1") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "untitled-font-1" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "untitled-font-1" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-loop-logo:before {
+  content: "a";
+  font-size: 140px;
+}
+
+.loop-logo {
+  float: left;
+  padding-top: 10px;
+}
+
 
 .nav-wrapper {
   .top-menu li:last-child {
@@ -48,45 +144,28 @@ section.body {
   margin: 0;
 }
 
-// body section.body .timeline {
-//   .questions {
-//     position: relative;
-//     .avatar-circle {
-//       position: absolute;
-//       width: 60px;
-//       left: -70px;
-//       top: 15px;
-//       z-index: 10;
-//     }
-//     .vertbar {
-//       position: absolute;
-//       left: -44px;
-//       top: 30px;
-//       width: 8px;
-//       height: 100px;
-//       background-color: #607D8B;
-//       z-index: 5;
-//     }
-//   }
-// }
-
-
-
-
 $cActive: beige;
 $cHighway: #ccc;
 
 $cDeptBase: #ccc;
 $cDeptBaseDark: darken($cDeptBase, 10%);
+$cDeptBaseLight: lighten($cDeptBase, 10%);
+
+$cDeptNurse: #ffecb3;
+$cDeptNurseDark: darken($cDeptNurse, 10%);
+$cDeptNurseLight: lighten($cDeptNurse, 10%);
 
 $cDeptPT: #d1c4e9;
 $cDeptPTDark: darken($cDeptPT, 10%);
+$cDeptPTLight: lighten($cDeptPT, 10%);
 
 $cDeptOncology: #c5cae9;
 $cDeptOncologyDark: darken($cDeptOncology, 10%);
+$cDeptOncologyLight: lighten($cDeptOncology, 10%);
 
 $cDeptCardio: #e9c4d1;
 $cDeptCardioDark: darken($cDeptCardio, 10%);
+$cDeptCardioLight: lighten($cDeptCardio, 10%);
 
 div.activity {
   width: 1020px;
@@ -136,11 +215,15 @@ div.activity {
     .card-n-content {
       float: right;
       width: 490px;
-      height: 103px;
+      min-height: 103px;
+      overflow: hidden;
       padding: 10px;
       border-radius: 5px;
       background-color: $cDeptBase;
       box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+      &.with-notes {
+        // min-height: 200px;
+      }
       .img-pad {
         float: left;
         width: 100px;
@@ -158,41 +241,64 @@ div.activity {
         padding: 6px 10px 0 0;
         font-style: italic;
       }
-    }
-    .triangle {
-      position: absolute;
-      left: 41px;
-      top: 10px;
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 10px 10px 10px 0;
-      border-color: transparent $cDeptBase transparent transparent;
+      .notes {
+        width: calc(100% + 20px);
+        height: 150px;
+        clear: both;
+        margin: -10px;
+        background-color: $cDeptBaseLight;
+      }
+      .triangle {
+        position: absolute;
+        left: 41px;
+        top: 10px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent $cDeptBase transparent transparent;
+      }
     }
   }
 }
 
 div.activity .wrapper > .deptBase { background-color: $cDeptBase; }
 div.activity .wrapper .card-n-content .deptBase { border-color: transparent $cDeptBase transparent transparent; }
+div.activity .wrapper .card-n-content .deptBaseLight { background-color: $cDeptBaseLight; }
 div.activity .wrapper .circleLarge .deptBaseDark { background-color: $cDeptBaseDark; }
 div.activity:hover .wrapper > .deptBase { background-color: $cDeptBaseDark; }
 div.activity:hover .wrapper .card-n-content .deptBase { border-color: transparent $cDeptBaseDark transparent transparent; }
+div.activity:hover .wrapper .card-n-content .deptBaseLight { background-color: $cDeptBase; }
+
+div.activity .wrapper > .deptNurse { background-color: $cDeptNurse; }
+div.activity .wrapper .card-n-content .deptNurse { border-color: transparent $cDeptNurse transparent transparent; }
+div.activity .wrapper .card-n-content .deptNurseLight { background-color: $cDeptNurseLight; }
+div.activity .wrapper .circleLarge .deptNurseDark { background-color: $cDeptNurseDark; }
+div.activity:hover .wrapper > .deptNurse { background-color: $cDeptNurseDark; }
+div.activity:hover .wrapper .card-n-content .deptNurse { border-color: transparent $cDeptNurseDark transparent transparent; }
+div.activity:hover .wrapper .card-n-content .deptNurseLight { background-color: $cDeptNurse; }
 
 div.activity .wrapper > .deptPT { background-color: $cDeptPT; }
 div.activity .wrapper .card-n-content .deptPT { border-color: transparent $cDeptPT transparent transparent; }
+div.activity .wrapper .card-n-content .deptPTLight { background-color: $cDeptPTLight; }
 div.activity .wrapper .circleLarge .deptPTDark { background-color: $cDeptPTDark; }
 div.activity:hover .wrapper > .deptPT { background-color: $cDeptPTDark; }
 div.activity:hover .wrapper .card-n-content .deptPT { border-color: transparent $cDeptPTDark transparent transparent; }
+div.activity:hover .wrapper .card-n-content .deptPTLight { background-color: $cDeptPT; }
 
 div.activity .wrapper > .deptOncology { background-color: $cDeptOncology; }
 div.activity .wrapper .card-n-content .deptOncology { border-color: transparent $cDeptOncology transparent transparent; }
+div.activity .wrapper .card-n-content .deptOncologyLight { background-color: $cDeptOncologyLight; }
 div.activity .wrapper .circleLarge .deptOncologyDark { background-color: $cDeptOncologyDark; }
 div.activity:hover .wrapper > .deptOncology { background-color: $cDeptOncologyDark; }
 div.activity:hover .wrapper .card-n-content .deptOncology { border-color: transparent $cDeptOncologyDark transparent transparent; }
+div.activity:hover .wrapper .card-n-content .deptOncologyLight { background-color: $cDeptOncology; }
 
 div.activity .wrapper > .deptCardio { background-color: $cDeptCardio; }
 div.activity .wrapper .card-n-content .deptCardio { border-color: transparent $cDeptCardio transparent transparent; }
+div.activity .wrapper .card-n-content .deptCardioLight { background-color: $cDeptCardioLight; }
 div.activity .wrapper .circleLarge .deptCardioDark { background-color: $cDeptCardioDark; }
 div.activity:hover .wrapper > .deptCardio { background-color: $cDeptCardioDark; }
 div.activity:hover .wrapper .card-n-content .deptCardio { border-color: transparent $cDeptCardioDark transparent transparent; }
+div.activity:hover .wrapper .card-n-content .deptCardioLight { background-color: $cDeptCardio; }
 
