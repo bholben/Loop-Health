@@ -10,6 +10,11 @@
 
     console.log($scope.visits);
 
+    $scope.toggleDetails = function (id) {
+      console.log(id);
+      $scope.showDetails = !$scope.showDetails;
+    };
+
   });
 
 }());

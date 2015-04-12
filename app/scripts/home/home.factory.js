@@ -8,6 +8,7 @@
 
     var visits = [
       {
+        id: 1,
         time: '2015-04-11T13:25:43.511Z',
         name: 'Dr. Marina Costa',
         title: 'Physician',
@@ -15,6 +16,7 @@
         department: 'Cardiology',
       },
       {
+        id: 2,
         time: '2015-04-11T13:03:43.511Z',
         name: 'Dr. Charles Barnes',
         title: 'Physician',
@@ -39,12 +41,14 @@
         ]
       },
       {
+        id: 3,
         time: '2015-04-11T12:20:43.511Z',
         name: 'Julien Nobert',
         title: 'Nurse',
         department: 'Nursing',
       },
       {
+        id: 4,
         time: '2015-04-11T12:04:43.511Z',
         name: 'Dr. Ilya Kovalyov',
         title: 'Physician',
@@ -52,12 +56,14 @@
         department: 'Cardiology',
       },
       {
+        id: 5,
         time: '2015-04-11T11:48:43.511Z',
         name: 'Kristi Jones',
         title: 'Nurse',
         department: 'Nursing',
       },
       {
+        id: 6,
         time: '2015-04-11T10:30:43.511Z',
         name: 'Dr. Lora Sedlacek',
         title: 'Resident',
@@ -65,18 +71,21 @@
         department: 'General Surgery',
       },
       {
+        id: 7,
         time: '2015-04-10T03:30:43.511Z',
         name: 'Kristi Jones',
         title: 'Nurse',
         department: 'Nursing',
       },
       {
+        id: 8,
         time: '2015-04-10T01:20:43.511Z',
         name: 'Kristi Jones',
         title: 'Nurse',
         department: 'Nursing',
       },
       {
+        id: 9,
         time: '2015-04-10T23:50:43.511Z',
         name: 'Dr. Lora Sedlacek',
         title: 'Resident',
@@ -84,12 +93,14 @@
         department: 'General Surgery',
       },
       {
+        id: 10,
         time: '2015-04-10T23:02:43.511Z',
         name: 'Julien Nobert',
         title: 'Nurse',
         department: 'Nursing',
       },
       {
+        id: 11,
         time: '2015-04-10T22:02:43.511Z',
         name: 'Dr. Dennis Schulze',
         title: 'Physician',
@@ -97,6 +108,7 @@
         department: 'Nephrology',
       },
       {
+        id: 12,
         time: '2015-04-10T21:50:43.511Z',
         name: 'Dr. Marina Costa',
         title: 'Physician',
@@ -104,6 +116,7 @@
         department: 'Cardiology',
       },
       {
+        id: 13,
         time: '2015-04-10T19:20:43.511Z',
         name: 'Dr. Ilya Kovalyov',
         title: 'Physician',

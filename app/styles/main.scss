@@ -196,8 +196,12 @@ div.activity {
         padding: 6px 10px 0 0;
         font-style: italic;
       }
-      .questions {
+      .details {
         width: calc(100% + 20px);
+      }
+      .questions {
+        float: left;
+        width: 490px;
         clear: both;
         margin: -10px;
         background-color: $cDeptBaseLight;
@@ -225,6 +229,12 @@ div.activity {
             padding-bottom: 15px;
           }
         }
+      }
+      .notes {
+        float: left;
+        width: 150px;
+        margin: -10px;
+        background-color: $cDeptBaseLight;
       }
       .triangle {
         position: absolute;
