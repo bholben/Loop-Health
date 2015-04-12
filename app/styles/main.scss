@@ -103,24 +103,24 @@ $cText: #607D8B;
 $cHighway: #ccc;
 
 $cDeptBase: #ccc;
-$cDeptBaseDark: darken($cDeptBase, 10%);
-$cDeptBaseLight: lighten($cDeptBase, 10%);
+$cDeptBaseDark: darken($cDeptBase, 5%);
+$cDeptBaseLight: lighten($cDeptBase, 5%);
 
 $cDeptNurse: #ffecb3;
-$cDeptNurseDark: darken($cDeptNurse, 10%);
-$cDeptNurseLight: lighten($cDeptNurse, 10%);
+$cDeptNurseDark: darken($cDeptNurse, 5%);
+$cDeptNurseLight: lighten($cDeptNurse, 5%);
 
 $cDeptPT: #d1c4e9;
-$cDeptPTDark: darken($cDeptPT, 10%);
-$cDeptPTLight: lighten($cDeptPT, 10%);
+$cDeptPTDark: darken($cDeptPT, 5%);
+$cDeptPTLight: lighten($cDeptPT, 5%);
 
 $cDeptOncology: #c5cae9;
-$cDeptOncologyDark: darken($cDeptOncology, 10%);
-$cDeptOncologyLight: lighten($cDeptOncology, 10%);
+$cDeptOncologyDark: darken($cDeptOncology, 5%);
+$cDeptOncologyLight: lighten($cDeptOncology, 5%);
 
 $cDeptCardio: #e9c4d1;
-$cDeptCardioDark: darken($cDeptCardio, 10%);
-$cDeptCardioLight: lighten($cDeptCardio, 10%);
+$cDeptCardioDark: darken($cDeptCardio, 5%);
+$cDeptCardioLight: lighten($cDeptCardio, 5%);
 
 div.activity {
   width: 1020px;
@@ -176,19 +176,19 @@ div.activity {
       border-radius: 5px;
       background-color: $cDeptBase;
       box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-      &.with-notes {
-        // min-height: 200px;
-      }
       .img-pad {
         float: left;
-        width: 100px;
-        padding: 10px 20px 10px 10px;
+        padding: 5px 20px 10px 10px;
+        img {
+          width: 80px;
+          height: 80px;
+        }
       }
       .info {
         float: left;
-        width: 250px;
+        width: 240px;
         div:first-child {
-          font-size: 26px;
+          font-size: 22px;
         }
       }
       .department {
@@ -198,7 +198,6 @@ div.activity {
       }
       .questions {
         width: calc(100% + 20px);
-        // height: 150px;
         clear: both;
         margin: -10px;
         background-color: $cDeptBaseLight;
@@ -222,9 +221,6 @@ div.activity {
         }
         form p {
           margin-left: 15px;
-          &:first-child {
-            // padding-top: 10px;
-          }
           &:last-child {
             padding-bottom: 15px;
           }

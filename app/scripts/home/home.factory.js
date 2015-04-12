@@ -120,13 +120,13 @@
     };
 
     var tempImageMap = {
-      'Dr. Marina Costa': 'Bob',
-      'Dr. Charles Barnes': 'Bob',
-      'Julien Nobert': 'Bob',
-      'Dr. Ilya Kovalyov': 'Bob',
-      'Kristi Jones': 'Bob',
-      'Dr. Lora Sedlacek': 'Bob',
-      'Dr. Dennis Schulze': 'Bob',
+      'Dr. Marina Costa': 'Marina',
+      'Dr. Charles Barnes': 'Charles',
+      'Julien Nobert': 'Julien',
+      'Dr. Ilya Kovalyov': 'Ilya',
+      'Kristi Jones': 'Kristi',
+      'Dr. Lora Sedlacek': 'Lora',
+      'Dr. Dennis Schulze': 'Dennis',
     };
 
     visits.forEach(function (visit) {
