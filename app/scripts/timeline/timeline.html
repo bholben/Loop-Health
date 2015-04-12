@@ -1,27 +1,25 @@
 
-  <div class="activity" ng-repeat="visit in visits">
-    <div class="timestamp">
-      <p class="date">{{ visit.time | date }}</p>
-      <p class="time">{{ visit.time | date:'shortTime' }}</p>
-    </div>
-    <div class="wrapper">
-      <div class="valign-wrapper card-n-content {{ visit.colorDept }}">
-        <div class="circleLarge">
-          <div class="circleSmall {{ visit.colorDept }}Dark"></div>
-        </div>
-        <div class="col s2 img-pad">
-          <img ng-src="images/{{ visit.imageName }}.jpg" alt="" class="circle responsive-img">
-        </div>
-        <div class="col s5 info">
-          <div class="blue-grey-text">{{ visit.name }}</div>
-          <div class="blue-grey-text">{{ visit.title }}</div>
-          <div class="blue-grey-text">{{ visit.role }}</div>
-        </div>
-        <div class="col s6">
-          <div class="blue-grey-text department">{{ visit.department }}</div>
-        </div>
-        <div class="triangle {{ visit.colorDept }}"></div>
+<div class="activity" ng-repeat="visit in visits">
+  <div class="timestamp">
+    <p class="date">{{ visit.time | date }}</p>
+    <p class="time">{{ visit.time | date:'shortTime' }}</p>
+  </div>
+  <div class="wrapper">
+    <div class="card-n-content {{ visit.colorDept }}">
+      <div class="circleLarge">
+        <div class="circleSmall {{ visit.colorDept }}Dark"></div>
       </div>
+      <div class="img-pad">
+        <img ng-src="images/{{ visit.imageName }}.jpg" class="circle responsive-img">
+      </div>
+      <div class="info">
+        <div class="blue-grey-text">{{ visit.name }}</div>
+        <div class="blue-grey-text">{{ visit.title }}</div>
+        <div class="blue-grey-text">{{ visit.role }}</div>
+      </div>
+      <div class="blue-grey-text department">{{ visit.department }}</div>
+      <div class="triangle {{ visit.colorDept }}"></div>
     </div>
   </div>
+</div>
 
