@@ -1,191 +1,27 @@
 
-  <div class="activity">
+  <div class="activity" ng-repeat="visit in visits">
     <div class="timestamp">
-      <p class="date">4/10/13</p>
-      <p class="time">18:30</p>
+      <p class="date">{{ visit.time | date }}</p>
+      <p class="time">{{ visit.time | date:'shortTime' }}</p>
     </div>
     <div class="wrapper">
-      <div class="valign-wrapper card-n-content deptPT">
+      <div class="valign-wrapper card-n-content {{ visit.colorDept }}">
         <div class="circleLarge">
-          <div class="circleSmall deptPTDark"></div>
+          <div class="circleSmall {{ visit.colorDept }}Dark"></div>
         </div>
         <div class="col s2 img-pad">
-          <img src="images/bob.jpg" alt="" class="circle responsive-img">
+          <img ng-src="images/{{ visit.imageName }}.jpg" alt="" class="circle responsive-img">
         </div>
         <div class="col s5 info">
-          <div class="blue-grey-text">Dr. Stacy Anderson</div>
-          <div class="blue-grey-text">Physical Therapist</div>
+          <div class="blue-grey-text">{{ visit.name }}</div>
+          <div class="blue-grey-text">{{ visit.title }}</div>
+          <div class="blue-grey-text">{{ visit.role }}</div>
         </div>
         <div class="col s6">
-          <div class="blue-grey-text department">Physical Therapy</div>
+          <div class="blue-grey-text department">{{ visit.department }}</div>
         </div>
-        <div class="triangle deptPT"></div>
+        <div class="triangle {{ visit.colorDept }}"></div>
       </div>
     </div>
   </div>
-
-  <div class="activity">
-    <div class="timestamp">
-      <p class="date">4/10/13</p>
-      <p class="time">18:30</p>
-    </div>
-    <div class="wrapper">
-      <div class="valign-wrapper card-n-content deptCardio">
-        <div class="circleLarge">
-          <div class="circleSmall deptCardioDark"></div>
-        </div>
-        <div class="col s2 img-pad">
-          <img src="images/bob.jpg" alt="" class="circle responsive-img">
-        </div>
-        <div class="col s5 info">
-          <div class="blue-grey-text">Dr. Stacy Anderson</div>
-          <div class="blue-grey-text">Physical Therapist</div>
-        </div>
-        <div class="col s6">
-          <div class="blue-grey-text department">Physical Therapy</div>
-        </div>
-        <div class="triangle deptCardio"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="activity">
-    <div class="timestamp">
-      <p class="date">4/10/13</p>
-      <p class="time">18:30</p>
-    </div>
-    <div class="wrapper">
-      <div class="valign-wrapper card-n-content">
-        <div class="circleLarge">
-          <div class="circleSmall"></div>
-        </div>
-        <div class="col s2 img-pad">
-          <img src="images/bob.jpg" alt="" class="circle responsive-img">
-        </div>
-        <div class="col s10 info">
-          <div class="blue-grey-text">Dr. Stacy Anderson</div>
-          <div class="blue-grey-text">Physical Therapy</div>
-        </div>
-        <div class="triangle"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="activity">
-    <div class="timestamp">
-      <p class="date">4/10/13</p>
-      <p class="time">18:30</p>
-    </div>
-    <div class="wrapper">
-      <div class="valign-wrapper card-n-content">
-        <div class="circleLarge">
-          <div class="circleSmall"></div>
-        </div>
-        <div class="col s2 img-pad">
-          <img src="images/bob.jpg" alt="" class="circle responsive-img">
-        </div>
-        <div class="col s10 info">
-          <div class="blue-grey-text">Dr. Stacy Anderson</div>
-          <div class="blue-grey-text">Physical Therapy</div>
-        </div>
-        <div class="triangle"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="activity">
-    <div class="timestamp">
-      <p class="date">4/11/13</p>
-      <p class="time">12:04</p>
-    </div>
-    <div class="wrapper">
-      <div class="card-n-content">
-        <h2>Greens radish arugula</h2>
-        <article>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error earum aperiam natus ipsam ad aspernatur quaerat? Eius nihil maxime cum ullam distinctio ex, excepturi esse ut ea? Maxime doloremque, minus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque exercitationem dolor velit commodi sunt libero autem culpa, quae excepturi est nulla beatae nam explicabo quaerat delectus repudiandae nisi ipsum veritatis.</p>
-        </article>
-      </div>
-      <div class="circleLarge">
-        <div class="circleSmall"></div>
-      </div>
-      <div class="triangle"></div>
-    </div>
-  </div>
-
-<div class="timeline">
-
-<div class="col s12 m8 offset-m2 l6 offset-l3 questions">
-  <a href="#!">
-    <span class="avatar-circle">
-      <img src="images/bob.jpg" alt="" class="circle responsive-img">
-    </span>
-    <div class="vertbar"></div>
-    <div class="card-panel">
-      <div class="valign-wrapper">
-<!--         <div class="col s2">
-          <img src="images/bob.jpg" alt="" class="circle responsive-img">
-        </div> -->
-        <div class="col s12">
-          <div class="blue-grey-text">Dr. William McRoberts</div>
-          <div class="blue-grey-text">Internal Medicine</div>
-          <!-- <div class="grey-text">Today, 8:51am</div> -->
-        </div>
-      </div>
-    </div>
-  </a>
-</div>
-
-<div class="col s12 m8 offset-m2 l6 offset-l3 questions">
-<a href="#!">
-  <div class="card-panel">
-    <div class="valign-wrapper">
-      <div class="col s2">
-        <img src="images/bob.jpg" alt="" class="circle responsive-img">
-      </div>
-      <div class="col s10 info">
-        <div class="blue-grey-text">Dr. Stacy Anderson</div>
-        <div class="blue-grey-text">Physical Therapy</div>
-        <div class="grey-text">Today, 9:14am</div>
-      </div>
-    </div>
-  </div>
-</a>
-</div>
-
-<div class="col s12 m8 offset-m2 l6 offset-l3 questions">
-<a href="#!">
-  <div class="card-panel">
-    <div class="valign-wrapper">
-      <div class="col s2">
-        <img src="images/bob.jpg" alt="" class="circle responsive-img">
-      </div>
-      <div class="col s10 info">
-        <div class="blue-grey-text">Dr. Sanjay Patel</div>
-        <div class="blue-grey-text">Cosmetic Surgeon</div>
-        <div class="grey-text">Today, 1:55pm</div>
-      </div>
-    </div>
-  </div>
-</a>
-</div>
-
-<div class="col s12 m8 offset-m2 l6 offset-l3 questions">
-<a href="#!">
-  <div class="card-panel">
-    <div class="valign-wrapper">
-      <div class="col s2">
-        <img src="images/bob.jpg" alt="" class="circle responsive-img">
-      </div>
-      <div class="col s10 info">
-        <div class="blue-grey-text">Dr. Melissa Gunther</div>
-        <div class="blue-grey-text">Psychiatry</div>
-        <div class="grey-text">Today, 3:00pm</div>
-      </div>
-    </div>
-  </div>
-</a>
-</div>
-
-</div>
-
 

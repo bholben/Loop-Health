@@ -76,11 +76,14 @@ body section.body .timeline {
 $cActive: beige;
 $cHighway: #ccc;
 
-$cDeptBase: #888;
+$cDeptBase: #ccc;
 $cDeptBaseDark: darken($cDeptBase, 10%);
 
 $cDeptPT: #d1c4e9;
 $cDeptPTDark: darken($cDeptPT, 10%);
+
+$cDeptOncology: #c5cae9;
+$cDeptOncologyDark: darken($cDeptOncology, 10%);
 
 $cDeptCardio: #e9c4d1;
 $cDeptCardioDark: darken($cDeptCardio, 10%);
@@ -91,19 +94,17 @@ div.activity {
   .timestamp {
     float: left;
     width: 170px;
+    padding-left: 30px;
     .date, .time {
-      text-align: right;
+      margin: 0;
       padding-right: 40px;
+      color: #607D8B;
     }
     .date {
-      margin: 0;
       font-size: 16px;
-      color: #A4C0D1;
     }
     .time {
-      font-size: 46px;
-      margin: 0;
-      color: $cActive;
+      font-size: 20px;
     }
   }
   .wrapper {
@@ -134,6 +135,7 @@ div.activity {
     .card-n-content {
       float: right;
       width: 790px;
+      // height: 103px;
       padding: 10px;
       border-radius: 5px;
       background-color: $cDeptBase;
@@ -162,26 +164,29 @@ div.activity {
       border-color: transparent $cDeptBase transparent transparent;
     }
   }
-  &:hover .timestamp .time {
-    color: $cActive;
-  }
-  &:hover .wrapper .card-n-content {
-    background-color: $cActive;
-  }
-  &:hover .wrapper .triangle {
-    border-color: transparent $cActive transparent transparent;
-  }
 }
+
+div.activity .wrapper > .deptBase { background-color: $cDeptBase; }
+div.activity .wrapper .card-n-content .deptBase { border-color: transparent $cDeptBase transparent transparent; }
+div.activity .wrapper .circleLarge .deptBaseDark { background-color: $cDeptBaseDark; }
+div.activity:hover .wrapper > .deptBase { background-color: $cDeptBaseDark; }
+div.activity:hover .wrapper .card-n-content .deptBase { border-color: transparent $cDeptBaseDark transparent transparent; }
 
 div.activity .wrapper > .deptPT { background-color: $cDeptPT; }
 div.activity .wrapper .card-n-content .deptPT { border-color: transparent $cDeptPT transparent transparent; }
 div.activity .wrapper .circleLarge .deptPTDark { background-color: $cDeptPTDark; }
+div.activity:hover .wrapper > .deptPT { background-color: $cDeptPTDark; }
+div.activity:hover .wrapper .card-n-content .deptPT { border-color: transparent $cDeptPTDark transparent transparent; }
+
+div.activity .wrapper > .deptOncology { background-color: $cDeptOncology; }
+div.activity .wrapper .card-n-content .deptOncology { border-color: transparent $cDeptOncology transparent transparent; }
+div.activity .wrapper .circleLarge .deptOncologyDark { background-color: $cDeptOncologyDark; }
+div.activity:hover .wrapper > .deptOncology { background-color: $cDeptOncologyDark; }
+div.activity:hover .wrapper .card-n-content .deptOncology { border-color: transparent $cDeptOncologyDark transparent transparent; }
 
 div.activity .wrapper > .deptCardio { background-color: $cDeptCardio; }
 div.activity .wrapper .card-n-content .deptCardio { border-color: transparent $cDeptCardio transparent transparent; }
 div.activity .wrapper .circleLarge .deptCardioDark { background-color: $cDeptCardioDark; }
-
-
-
-
+div.activity:hover .wrapper > .deptCardio { background-color: $cDeptCardioDark; }
+div.activity:hover .wrapper .card-n-content .deptCardio { border-color: transparent $cDeptCardioDark transparent transparent; }
 
