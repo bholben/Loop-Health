@@ -100,6 +100,7 @@
     top: 72px;
     right: 150px;
     width: 200px;
+    z-index: 1000;
     background-color: white;
     box-shadow: 0 0 4px rgba(0,0,0,.14), 2px 4px 8px rgba(0,0,0,.28);
     ul.user-menu {
@@ -154,8 +155,8 @@ $cDeptCardioDark: darken($cDeptCardio, 5%);
 $cDeptCardioLight: lighten($cDeptCardio, 5%);
 
 div.activity {
-  width: 1020px;
-  margin-top: 30px;
+  width: 900px;
+  margin: 30px auto 0;
   .timestamp {
     float: left;
     width: 170px;

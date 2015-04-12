@@ -28,7 +28,7 @@
           {
             id: 3,
             question: 'What is Lovenox? Why am I on it?',
-            completed: true
+            completed: false
           },
         ]
       },
@@ -43,17 +43,17 @@
           {
             id: 1,
             question: 'My daughter wanted to ask, how can she prepare my room at home?',
-            completed: false
+            completed: true
           },
           {
             id: 2,
             question: 'Ask about wheelchair recommendations.',
-            completed: false
+            completed: true
           },
           {
             id: 3,
             question: 'How do I deal with bed sores?',
-            completed: false
+            completed: true
           },
           {
             id: 4,
@@ -81,12 +81,12 @@
           {
             id: 1,
             question: 'When can I start eating salt again? Can you review my diet restrictions again?',
-            completed: false
+            completed: true
             },
           {
             id: 2,
             question: 'Why are my blood pressure medications different then I take at home?',
-            completed: false
+            completed: true
           },
           {
             id: 3,
@@ -115,12 +115,12 @@
           {
             id: 1,
             question: 'Ask about wheelchair recommendations.',
-            completed: false
+            completed: true
           },
           {
             id: 2,
             question: 'How do I deal with bed sores?',
-            completed: false
+            completed: true
           },
     {
             id: 3,
@@ -150,6 +150,23 @@
         title: 'Resident',
         role: 'Attending',
         department: 'General Surgery',
+        questions: [
+          {
+            id: 1,
+            question: 'Ask about wheelchair recommendations.',
+            completed: true
+          },
+          {
+            id: 2,
+            question: 'How do I deal with bed sores?',
+            completed: true
+          },
+          {
+            id: 3,
+            question: 'I\'ve been constipated for the past week, is that normal?',
+            completed: true
+          },
+        ]
       },
       {
         id: 10,
@@ -165,6 +182,18 @@
         title: 'Physician',
         role: 'Resident',
         department: 'Nephrology',
+        questions: [
+          {
+            id: 1,
+            question: 'What does high creatine mean? What do I need to do to decrease this?',
+            completed: true
+          },
+          {
+            id: 2,
+            question: 'Will it help if I drink more than 8 cups of water per day?',
+            completed: true
+          },
+        ]
       },
       {
         id: 12,
@@ -173,6 +202,28 @@
         title: 'Physician',
         role: 'Attending',
         department: 'Cardiology',
+        questions: [
+          {
+            id: 1,
+            question: 'My blood pressure medications different then I take at home? why?',
+            completed: true
+          },
+          {
+            id: 2,
+            question: 'What is Lovenox? Why am I on it?',
+            completed: true
+          },
+          {
+            id: 3,
+            question: 'Dr. Costa, when can I start eating salt again? Can you review',
+            completed: true
+          },
+          {
+            id: 4,
+            question: 'What is heparin? Why am I on it? I don’t like being on meds I dont need, how, can I be off of it?',
+            completed: true
+          }
+        ]
       },
       {
         id: 13,
