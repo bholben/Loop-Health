@@ -20,8 +20,7 @@
     'app.user_profile',
 
     // Components
-    'app.timeline',
-    'app.questions',
+    'app.home',
 
   ]);
 

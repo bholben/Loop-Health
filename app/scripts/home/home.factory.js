@@ -2,9 +2,9 @@
 ;(function () {
   'use strict';
 
-  angular.module('app.timeline')
+  angular.module('app.home')
 
-  .factory('TimelineFactory', function () {
+  .factory('HomeFactory', function () {
 
     var visits = [
       {
@@ -20,6 +20,23 @@
         title: 'Physician',
         role: 'Attending',
         department: 'General Surgery',
+        questions: [
+          {
+            id: 1,
+            question: 'Get the doctor to tell me about long-term recovery plans and how to get around.',
+            completed: true
+          },
+          {
+            id: 2,
+            question: 'Ask about wheelchair recommendations.',
+            completed: false
+          },
+          {
+            id: 3,
+            question: 'How to deal with bed sores?',
+            completed: false
+          },
+        ]
       },
       {
         time: '2015-04-11T12:20:43.511Z',

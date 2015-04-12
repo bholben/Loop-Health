@@ -5,7 +5,7 @@
   angular.module('app.paths', [])
 
   .constant('PATHS', {
-    HOME: '/profile',
+    HOME: '/',
     PUBLIC: ['/signup', '/signin'],
   });
 

@@ -18,7 +18,18 @@
         <div class="blue-grey-text">{{ visit.role }}</div>
       </div>
       <div class="blue-grey-text department">{{ visit.department }}</div>
-      <div class="notes {{ visit.colorDept }}Light"></div>
+      <div class="questions {{ visit.colorDept }}Light">
+        <h5>Questions</h5>
+        <div class="add-button">add</div>
+
+        <form>
+          <p ng-repeat="question in visit.questions">
+            <input type="checkbox" class="filled-in" id="item{{ question.id }}" ng-checked="{{ question.completed }}">
+            <label for="item{{ question.id }}">{{ question.question }}</label>
+          </p>
+        </form>
+
+      </div>
       <div class="triangle {{ visit.colorDept }}"></div>
     </div>
   </div>

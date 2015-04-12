@@ -98,7 +98,8 @@ section.body {
   margin: 0;
 }
 
-$cActive: beige;
+$cText: #607D8B;
+
 $cHighway: #ccc;
 
 $cDeptBase: #ccc;
@@ -132,7 +133,7 @@ div.activity {
     .date, .time {
       margin: 0;
       padding-right: 40px;
-      color: #607D8B;
+      color: $cText;
     }
     .date {
       font-size: 16px;
@@ -195,12 +196,39 @@ div.activity {
         padding: 6px 10px 0 0;
         font-style: italic;
       }
-      .notes {
+      .questions {
         width: calc(100% + 20px);
-        height: 150px;
+        // height: 150px;
         clear: both;
         margin: -10px;
         background-color: $cDeptBaseLight;
+        h5 {
+          float: left;
+          width: 330px;
+          margin: 10px 15px 15px;
+          border-bottom: 1px solid $cText;
+          color: $cText;
+        }
+        .add-button {
+          float: right;
+          width: 80px;
+          height: 30px;
+          margin: 8px 15px 0;
+          border-radius: 20px;
+          border: 3px solid $cText;
+          color: $cText;
+          font-size: 16px;
+          text-align: center;
+        }
+        form p {
+          margin-left: 15px;
+          &:first-child {
+            // padding-top: 10px;
+          }
+          &:last-child {
+            padding-bottom: 15px;
+          }
+        }
       }
       .triangle {
         position: absolute;
