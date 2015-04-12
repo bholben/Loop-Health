@@ -1,43 +1,45 @@
 
 <div class="activity" ng-repeat="visit in visits">
-  <div class="timestamp">
-    <p class="date">{{ visit.time | date }}</p>
-    <p class="time">{{ visit.time | date:'shortTime' }}</p>
-  </div>
-  <div class="wrapper">
-    <div class="card-n-content {{ visit.colorDept }}" ng-click="toggleDetails(visit.id)">
-      <div class="circleLarge">
-        <div class="circleSmall {{ visit.colorDept }}Dark"></div>
-      </div>
-      <div class="img-pad">
-        <img ng-src="images/{{ visit.imageName }}.jpg" class="circle responsive-img">
-      </div>
-      <div class="info">
-        <div class="blue-grey-text">{{ visit.name }}</div>
-        <div class="blue-grey-text">{{ visit.title }}</div>
-        <div class="blue-grey-text">{{ visit.role }}</div>
-      </div>
-      <div class="blue-grey-text department">{{ visit.department }}</div>
-
-      <div class="details" ng-show="showDetails">
-
-        <div class="questions {{ visit.colorDept }}Light">
-          <h5>Questions</h5>
-          <div class="add-button">add</div>
-          <form>
-            <p ng-repeat="question in visit.questions">
-              <input type="checkbox" class="filled-in" id="item{{ question.id }}" ng-checked="{{ question.completed }}">
-              <label for="item{{ question.id }}">{{ question.question }}</label>
-            </p>
-          </form>
+  <div ng-show="activeDept(visit.department)">
+    <div class="timestamp">
+      <p class="date">{{ visit.time | date }}</p>
+      <p class="time">{{ visit.time | date:'shortTime' }}</p>
+    </div>
+    <div class="wrapper">
+      <div class="card-n-content {{ visit.colorDept }}" ng-click="toggleDetails(visit)">
+        <div class="circleLarge">
+          <div class="circleSmall {{ visit.colorDept }}Dark"></div>
         </div>
-
-<!--         <div class="notes">
-          This is some sample notes.
+        <div class="img-pad">
+          <img ng-src="images/{{ visit.imageName }}.jpg" class="circle responsive-img">
         </div>
- -->
+        <div class="info">
+          <div class="blue-grey-text">{{ visit.name }}</div>
+          <div class="blue-grey-text">{{ visit.title }}</div>
+          <div class="blue-grey-text">{{ visit.role }}</div>
+        </div>
+        <div class="blue-grey-text department">{{ visit.department }}</div>
+
+        <div class="details" ng-show="showDetails(visit.department)">
+
+          <div class="questions {{ visit.colorDept }}Light">
+            <h5>Questions</h5>
+            <div class="add-button">add</div>
+            <form>
+              <p ng-repeat="question in visit.questions">
+                <input type="checkbox" class="filled-in" id="item{{ question.id }}" ng-checked="{{ question.completed }}">
+                <label for="item{{ question.id }}">{{ question.question }}</label>
+              </p>
+            </form>
+          </div>
+
+  <!--         <div class="notes">
+            This is some sample notes.
+          </div>
+   -->
+        </div>
+        <div class="triangle {{ visit.colorDept }}"></div>
       </div>
-      <div class="triangle {{ visit.colorDept }}"></div>
     </div>
   </div>
 </div>

@@ -14,6 +14,23 @@
         title: 'Physician',
         role: 'Attending',
         department: 'Cardiology',
+        questions: [
+          {
+            id: 1,
+            question: 'When can I start eating salt again? Can you review my diet restrictions again?',
+            completed: false
+          },
+          {
+            id: 2,
+            question: 'Why are my blood pressure medications different then I take at home?',
+            completed: true
+          },
+          {
+            id: 3,
+            question: 'What is Lovenox? Why am I on it?',
+            completed: true
+          },
+        ]
       },
       {
         id: 2,
@@ -25,8 +42,8 @@
         questions: [
           {
             id: 1,
-            question: 'Get the doctor to tell me about long-term recovery plans and how to get around.',
-            completed: true
+            question: 'My daughter wanted to ask, how can she prepare my room at home?',
+            completed: false
           },
           {
             id: 2,
@@ -35,8 +52,13 @@
           },
           {
             id: 3,
-            question: 'How to deal with bed sores?',
+            question: 'How do I deal with bed sores?',
             completed: false
+          },
+          {
+            id: 4,
+            question: 'I\'ve been constipated for the past week, is that normal?',
+            completed: true
           },
         ]
       },
@@ -54,6 +76,24 @@
         title: 'Physician',
         role: 'Resident',
         department: 'Cardiology',
+
+        questions: [
+          {
+            id: 1,
+            question: 'When can I start eating salt again? Can you review my diet restrictions again?',
+            completed: false
+            },
+          {
+            id: 2,
+            question: 'Why are my blood pressure medications different then I take at home?',
+            completed: false
+          },
+          {
+            id: 3,
+            question: 'What is Lovenox? Why am I on it?',
+            completed: true
+          },
+        ]
       },
       {
         id: 5,
@@ -69,6 +109,25 @@
         title: 'Resident',
         role: 'Attending',
         department: 'General Surgery',
+
+
+        questions: [
+          {
+            id: 1,
+            question: 'Ask about wheelchair recommendations.',
+            completed: false
+          },
+          {
+            id: 2,
+            question: 'How do I deal with bed sores?',
+            completed: false
+          },
+    {
+            id: 3,
+            question: 'I\'92ve been constipated for the past week, is that normal?',
+            completed: true
+          },
+        ]
       },
       {
         id: 7,
@@ -146,6 +205,17 @@
       visit.colorDept = colorMap[visit.department];
       visit.imageName = tempImageMap[visit.name];
     });
+
+    var departments = {};
+    visits.forEach(function (visit) {
+      if (!departments[visit.department]) {
+        departments[visit.department] = [visit.id];
+      } else {
+        departments[visit.department].push(visit.id);
+      }
+    });
+
+    console.log(departments);
 
     return {
       getVisits: function () {
